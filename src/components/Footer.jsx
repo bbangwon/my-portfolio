@@ -4,7 +4,7 @@ const footerStyle = {
   backgroundColor: "#ffffff",
   padding: "16px 0",
   borderTop: "1px solid #e9ecef",
-  marginTop: "20px",
+  marginTop: "30px",
   textAlign: "center",
 };
 

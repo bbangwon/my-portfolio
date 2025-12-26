@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 
+const gridStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+  gap: "20px",
+  marginTop: "20px",
+};
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
 
@@ -19,13 +26,13 @@ export default function Projects() {
   }, []);
 
   return (
-    <div>
+    <section>
       <h1>Projects</h1>
-      <div>
+      <div style={gridStyle}>
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project}></ProjectCard>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
