@@ -9,4 +9,5 @@ body {
   color: #343a40;
   line-height: 1.6;
   padding: 0 16px;
+  transition: background-color 0.3s, color 0.3s;
 }
