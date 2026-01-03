@@ -36,13 +36,13 @@ export default function Header() {
   return (
     <header style={headerStyle}>
       <nav>
-        <Link to="/" style={linkStyle}>
+        <Link to={import.meta.env.BASE_URL} style={linkStyle}>
           Home
         </Link>
-        <Link to="/about" style={linkStyle}>
+        <Link to={`${import.meta.env.BASE_URL}about`} style={linkStyle}>
           About
         </Link>
-        <Link to="/projects" style={linkStyle}>
+        <Link to={`${import.meta.env.BASE_URL}projects`} style={linkStyle}>
           Projects
         </Link>
         <button onClick={toggleTheme} style={buttonStyle}>

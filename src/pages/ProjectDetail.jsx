@@ -42,7 +42,7 @@ export default function ProjectDetail() {
 
   async function loadJsonData() {
     try {
-      const res = await fetch("/data/projects.json");
+      const res = await fetch(`${import.meta.env.BASE_URL}data/projects.json`);
       const data = await res.json();
       if (data) {
         const selectedProject = data.find((p) => p.id === Number(id));
@@ -69,7 +69,7 @@ export default function ProjectDetail() {
       >
         Visit Project
       </a>
-      <Link to="/projects" style={backStyle}>
+      <Link to={`${import.meta.env.BASE_URL}projects`} style={backStyle}>
         Back to Projects
       </Link>
     </div>

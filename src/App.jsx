@@ -29,11 +29,17 @@ function AppContent() {
   return (
     <main style={containerStyle}>
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/projects" element={<Projects></Projects>}></Route>
+        <Route path={import.meta.env.BASE_URL} element={<Home></Home>}></Route>
         <Route
-          path="/projects/:id"
+          path={`${import.meta.env.BASE_URL}about`}
+          element={<About></About>}
+        ></Route>
+        <Route
+          path={`${import.meta.env.BASE_URL}projects`}
+          element={<Projects></Projects>}
+        ></Route>
+        <Route
+          path={`${import.meta.env.BASE_URL}projects/:id`}
           element={<ProjectDetail></ProjectDetail>}
         ></Route>
       </Routes>

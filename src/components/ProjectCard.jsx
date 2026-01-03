@@ -33,7 +33,10 @@ export default function ProjectCard(props) {
     <div style={cardStyle}>
       <h2 style={titleStyle}>{project.name}</h2>
       <p style={descriptionStyle}>{project.description}</p>
-      <Link to={`/projects/${project.id}`} style={linkStyle}>
+      <Link
+        to={`${import.meta.env.BASE_URL}projects/${project.id}`}
+        style={linkStyle}
+      >
         View Details
       </Link>
     </div>
